@@ -38,23 +38,23 @@ function Home() {
   }
 
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1>Movie Search</h1>
-        <p>Find any movie instantly</p>
-      </header>
+  <div className="max-w-5xl mx-auto px-5 py-10">
+    <header className="text-center mb-9">
+      <h1 className="text-4xl font-bold mb-2">Movie Search</h1>
+      <p className="text-gray-400 text-sm">Find any movie instantly</p>
+    </header>
 
-      <SearchBar onSearch={searchMovies} />
+    <SearchBar onSearch={searchMovies} />
 
-      {loading && <p className="status">Searching...</p>}
-      {error && <p className="status error">{error}</p>}
-      {!loading && searched && movies.length === 0 && !error && (
-        <p className="status">No movies found</p>
-      )}
+    {loading && <p className="text-center text-gray-400 text-sm mb-6">Searching...</p>}
+    {error && <p className="text-center text-red-400 text-sm mb-6">{error}</p>}
+    {!loading && searched && movies.length === 0 && !error && (
+      <p className="text-center text-gray-400 text-sm mb-6">No movies found</p>
+    )}
 
-      <MovieGrid movies={movies} />
-    </div>
-  )
+    <MovieGrid movies={movies} />
+  </div>
+)
 }
 
 function App() {
