@@ -51,7 +51,7 @@ function MovieDetail({ apiKey }) {
       <img
         src={poster}
         alt={movie.Title}
-        className="w-64 rounded-xl shadow-lg flex-shrink-0"
+        className="w-64 rounded-xl shadow-lg shrink-0"
       />
 
       <div>

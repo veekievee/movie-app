@@ -46,13 +46,13 @@ function Home() {
 
     <SearchBar onSearch={searchMovies} />
 
-    {loading && <p className="text-center text-gray-400 text-sm mb-6">Searching...</p>}
+    
     {error && <p className="text-center text-red-400 text-sm mb-6">{error}</p>}
     {!loading && searched && movies.length === 0 && !error && (
       <p className="text-center text-gray-400 text-sm mb-6">No movies found</p>
     )}
 
-    <MovieGrid movies={movies} />
+    <MovieGrid movies={movies} loading={loading} /> 
   </div>
 )
 }
